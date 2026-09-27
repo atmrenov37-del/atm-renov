@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ATM Renov | Rénovation en Indre-et-Loire</title>
+
+  <meta name="description" content="ATM Renov - Rénovation en Indre-et-Loire. Découvrez nos réalisations et contactez-nous pour votre projet.">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      height: 100%;
+      margin: auto;
+      padding: 0 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-image {
+      height: 58px;
+      width: auto;
+      display: block;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .menu a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #222;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #888;
+    }
+
+
+    /* =========================
+       ACCUEIL
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 150px 25px 80px;
+
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.60),
+          rgba(0, 0, 0, 0.60)
+        ),
+        url("images/atm logo.jpeg") center/cover no-repeat;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      color: white;
+    }
+
+    .hero small {
+      display: block;
+
+      text-transform: uppercase;
+      letter-spacing: 4px;
+
+      font-size: 13px;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 8vw, 90px);
+      line-height: 0.95;
+      margin-bottom: 25px;
+      font-weight: 800;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      max-width: 650px;
+
+      font-size: 20px;
+      color: #eee;
+
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+
+      padding: 15px 30px;
+
+      background: white;
+      color: #111;
+
+      font-weight: bold;
+
+      border-radius: 3px;
+
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #d4d4d4;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 100px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      display: block;
+
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+
+      color: #888;
+      font-weight: bold;
+    }
+
+    .section-title h2 {
+      font-size: 46px;
+      line-height: 1.1;
+
+      margin-top: 10px;
+    }
+
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service {
+      padding: 40px 30px;
+
+      background: #f3f3f3;
+
+      border: 1px solid #e4e4e4;
+
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      background: #eaeaea;
+    }
+
+    .service-number {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .service h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .service p {
+      color: #666;
+    }
+
+
+    /* =========================
+       REALISATIONS
+    ========================= */
+
+    .portfolio {
+      background: #f7f7f7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      height: 330px;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+
+    /* =========================
+       A PROPOS
+    ========================= */
+
+    .about {
+      background: #e9e9e9;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 500px;
+
+      background:
+        url("images/image8.png")
+        center/cover no-repeat;
+    }
+
+    .about-text p {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .about-highlight {
+      border-left: 4px solid #222;
+      padding-left: 20px;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: #181818;
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact .section-title span {
+      color: #999;
+    }
+
+    .contact .section-title h2 {
+      color: white;
+    }
+
+    .contact-text {
+      color: #bbb;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-info a,
+    .contact-info span {
+      font-size: 19px;
+      color: white;
+    }
+
+    .contact-info a:hover {
+      color: #aaa;
+    }
+
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-box {
+      background: #252525;
+      padding: 40px;
+    }
+
+    .contact-box h3 {
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #bbb;
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #111;
+      color: #777;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    .footer-instagram {
+      display: block;
+      color: #aaa;
+      margin-top: 8px;
+    }
+
+    .footer-instagram:hover {
+      color: white;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      header {
+        height: 70px;
+      }
+
+      .logo-image {
+        height: 48px;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero h1 {
+        font-size: 55px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 350px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 37px;
+      }
+
+      .gallery-item {
+        height: 280px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       MENU
+  ========================= -->
+
+  <header>
+
+    <nav>
+
+      <a href="#accueil">
+
+        <img
+          src="images/atm logo.jpg"
+          alt="ATM Renov"
+          class="logo-image"
+        >
+
+      </a>
+
+
+      <ul class="menu">
+
+        <li>
+          <a href="#accueil">Accueil</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#realisations">Réalisations</a>
+        </li>
+
+        <li>
+          <a href="#apropos">À propos</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =========================
+       ACCUEIL
+  ========================= -->
+
+  <section class="hero" id="accueil">
+
+    <div class="hero-content">
+
+      <small>
+        Rénovation · Indre-et-Loire
+      </small>
+
+      <h1>
+        ATM<br>
+        RENOV
+      </h1>
+
+      <p>
+        Donnons une nouvelle vie à vos espaces.
+        Des travaux réalisés avec soin et attention
+        pour donner vie à vos projets.
+      </p>
+
+      <a
+        href="#contact"
+        class="button"
+      >
+        Demander un devis
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       SERVICES
+  ========================= -->
+
+  <section
+    class="services"
+    id="services"
+  >
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>
+          Notre savoir-faire
+        </span>
+
+        <h2>
+          Nos services
+        </h2>
+
+      </div>
+
+
+      <div class="services-grid">
+
+
+        <div class="service">
+
+          <div class="service-number">
+            01
+          </div>
+
+          <h3>
+            Rénovation
+          </h3>
+
+          <p>
+            Rénovation et transformation
+            de vos espaces selon vos besoins
+            et vos envies.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">
+            02
+          </div>
+
+          <h3>
+            Aménagement
+          </h3>
+
+          <p>
+            Amélioration et aménagement
+            de vos espaces pour un intérieur
+            moderne et fonctionnel.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">
+            03
+          </div>
+
+          <h3>
+            Travaux sur mesure
+          </h3>
+
+          <p>
+            Des solutions adaptées à chaque
+            projet avec une attention portée
+            aux finitions.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       REALISATIONS
+  ========================= -->
+
+  <section
+    class="portfolio"
+    id="realisations"
+  >
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>
+          Quelques projets
+        </span>
+
+        <h2>
+          Nos réalisations
+        </h2>
+
+      </div>
+
+
+      <div class="gallery">
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/Image6.jpeg"
+            alt="Réalisation ATM Renov"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/image8.png"
+            alt="Réalisation ATM Renov"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/image9.png"
+            alt="Réalisation ATM Renov"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/image10.png"
+            alt="Réalisation ATM Renov"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/image16.jpeg"
+            alt="Réalisation ATM Renov"
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/image17.jpeg"
+            alt="Réalisation ATM Renov"
+          >
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       A PROPOS
+  ========================= -->
+
+  <section
+    class="about"
+    id="apropos"
+  >
+
+    <div class="container">
+
+      <div class="about-grid">
+
+
+        <div class="about-image"></div>
+
+
+        <div class="about-text">
+
+
+          <div class="section-title">
+
+            <span>
+              ATM Renov
+            </span>
+
+            <h2>
+              Le goût du travail bien fait.
+            </h2>
+
+          </div>
+
+
+          <p>
+            ATM Renov vous accompagne dans
+            vos projets de rénovation en
+            Indre-et-Loire.
+          </p>
+
+
+          <p>
+            Chaque projet est réalisé avec
+            attention, de la préparation
+            jusqu'aux finitions.
+          </p>
+
+
+          <div class="about-highlight">
+
+            Votre projet mérite une réalisation
+            à la hauteur de vos idées.
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section
+    class="contact"
+    id="contact"
+  >
+
+    <div class="container">
+
+      <div class="contact-grid">
+
+
+        <div>
+
+          <div class="section-title">
+
+            <span>
+              Parlons de votre projet
+            </span>
+
+            <h2>
+              Contactez-nous
+            </h2>
+
+          </div>
+
+
+          <p class="contact-text">
+
+            Vous avez un projet de rénovation ?
+            Contactez ATM Renov pour échanger
+            sur vos besoins et demander votre devis.
+
+          </p>
+
+
+          <div class="contact-info">
+
+
+            <a href="tel:0669986298">
+
+              📞 06 69 98 62 98
+
+            </a>
+
+
+            <a href="mailto:atm.renov37@gmail.com">
+
+              ✉️ atm.renov37@gmail.com
+
+            </a>
+
+
+            <a
+              class="instagram-link"
+              href="https://www.instagram.com/atmrenov37/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              📷 Instagram · @atmrenov37
+
+            </a>
+
+
+            <span>
+
+              📍 Indre-et-Loire
+
+            </span>
+
+
+          </div>
+
+        </div>
+
+
+
+        <div class="contact-box">
+
+          <h3>
+            Un projet ?
+          </h3>
+
+          <p>
+            Décrivez-nous votre projet
+            et contactez-nous directement
+            pour en discuter.
+          </p>
+
+
+          <a
+            href="mailto:atm.renov37@gmail.com?subject=Demande%20de%20devis%20ATM%20Renov"
+            class="button"
+          >
+
+            Demander un devis
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    © 2026 ATM Renov · Rénovation en Indre-et-Loire
+
+    <a
+      class="footer-instagram"
+      href="https://www.instagram.com/atmrenov37/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Instagram · @atmrenov37
+    </a>
+
+  </footer>
+
+
+</body>
+</html>
